@@ -1,0 +1,41 @@
+{
+    "name": "walkerchiu/php-device-int",
+    "type": "library",
+    "authors": [
+        {
+            "name":  "Walker Chiu",
+            "email": "chenjen.chiou@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.3",
+        "walkerchiu/php-core-int": "^1.0"
+    },
+    "suggest": {
+        "walkerchiu/php-morph-image-int": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WalkerChiu\\Device\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "WalkerChiu\\Device\\DeviceServiceProvider"
+            ],
+            "aliases": {
+                "Device":          "WalkerChiu\\Device\\Models\\Entities\\Device",
+                "DeviceWithImage": "WalkerChiu\\Device\\Models\\Entities\\DeviceWithImage"
+            }
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
